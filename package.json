@@ -1,0 +1,26 @@
+{
+  "name": "react-profile-website",
+  "version": "1.0.0",
+  "description": "Framework for a profile site.",
+  "main": "index.js",
+  "dependencies": {
+    "framer-motion": "^3.3.0",
+    "next": "^10.0.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GalliWare/react-profile-website.git"
+  },
+  "author": "Craig Gallimore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GalliWare/react-profile-website/issues"
+  },
+  "homepage": "https://github.com/GalliWare/react-profile-website#readme"
+}
