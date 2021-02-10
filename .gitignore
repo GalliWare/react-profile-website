@@ -21,3 +21,6 @@ jspm_packages/
 
 # next js directory
 .next/
+
+# ignore public folder, so assets stay of github
+public
