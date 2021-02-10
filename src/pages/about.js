@@ -1,11 +1,12 @@
 import React from "react"
-import { ChakraProvider,Heading,Button, Wrap, WrapItem} from "@chakra-ui/react"
-import Header from "../Header"
+import { ChakraProvider, Box } from "@chakra-ui/react"
+import Header from "../components/Header"
 
 function About() {
   return (
     <ChakraProvider>
-      <Header name="About Me"/>
+      <Box backgroundColor="#222222" width="100%" position="fixed" height="100%"></Box>
+      <Header name="About Me" />
     </ChakraProvider>
   )
 }
