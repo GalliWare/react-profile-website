@@ -5,17 +5,19 @@ import Header from "../components/Header"
 function Index() {
   return (
     <ChakraProvider>
-      <Image src="/indexImage.jpg" w={["100%", "100%", "50%"]} mt={["25%", "25%", "0"]} position="fixed" fit={["fill", "fill", "contain"]} borderRadius={["full", "full", "none"]}></Image>
-      <Box display={["none", "none", "inherit"]} backgroundColor={["transparent", "transparent", "#222222"]} width="50%" position="fixed" marginLeft="50%" height="100%">
-        <Flex direction="column" marginTop="33%" marginLeft="10%">
-          <Heading fontFamily="verdana" color="yellow" size="2xl" marginBottom="4">
+      <Box backgroundColor="#222222" width="100%" position="fixed" height="100%"></Box>
+      <Image src="/indexImage.jpg" width={["100%", "100%", "50%"]} position="fixed"></Image>
+      <Box display={["inherit", "inherit", "none"]} width="100%" position="fixed" height="100%" bgGradient="linear(to-t, #222222, #222222, #222222, transparent , transparent)"></Box>
+      <Box display={["none", "none", "inherit"]} width="50%" position="fixed" height="150%" bgGradient="linear(to-l, #222222,#222222,#222222, transparent)" transform="rotate(12deg)" marginLeft="20%" marginTop="-10%"></Box>
+      <Box position="fixed" width={["100%", "50%"]} marginLeft={["0", "45%"]} height="100%">
+        <Flex direction="column" marginTop={["100%", "50%", "33%"]}>
+          <Heading padding="4" fontFamily="verdana" color="yellow" fontSize={["3xl", "5xl"]}>
             Software Developer
-          </Heading>
-          <Text as="kbd" color="white">
+          </Heading >
+          <Text as="kbd" color="white" padding="4" >
             Welcome to my profile page.
           </Text>
-        </Flex>
-      </Box>
+        </Flex></Box>
       <Header name="Home" />
     </ChakraProvider>
   )
