@@ -1,4 +1,5 @@
-import { Box, Button, Flex, Avatar, ChakraProvider, Spacer } from "@chakra-ui/react"
+import { Box, Button, Flex, Avatar, ChakraProvider, Spacer, Menu, MenuButton, MenuList, MenuItem, IconButton } from "@chakra-ui/react"
+import { HamburgerIcon } from "@chakra-ui/icons"
 import Link from "next/link"
 
 function Header() {
@@ -35,6 +36,40 @@ function Header() {
           </Button>
         </Box>
       </Flex>
+      <Menu display={["inherit", "inherit", "none"]} padding="5">
+        <MenuButton
+          as={IconButton}
+          aria-label="Options"
+          size="md"
+          variant="outline"
+          marginLeft="99%"
+          icon={<HamburgerIcon />}
+          backgroundColor="lightgreen"
+          display={["inherit", "inherit", "none"]}
+        />
+        <MenuList backgroundColor="lightgreen">
+          <MenuItem >
+            <Link href="/">
+              Home
+            </Link>
+          </MenuItem>
+          <MenuItem >
+            <Link href="/projects">
+              Projects
+            </Link>
+          </MenuItem>
+          <MenuItem >
+            <Link href="/contact">
+              Contact
+            </Link>
+          </MenuItem>
+          <MenuItem >
+            <Link href="/about">
+              About
+            </Link>
+          </MenuItem>
+        </MenuList>
+      </Menu>
     </ChakraProvider>
   )
 }
