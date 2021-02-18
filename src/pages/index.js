@@ -11,13 +11,17 @@ function Index() {
       <Box display={["none", "none", "none", "none", "inherit"]} width="50%" position="fixed" height="150%" bgGradient="linear(to-l, #222222, #222222, #222222, #222222, #222222, transparent, transparent, transparent)" transform="rotate(12deg)" marginLeft="20%" marginTop="-10%"></Box>
       <Box position="fixed" width={["100%", "100%", "100%", "100%", "50%"]} marginLeft={["0", "0", "0", "0", "45%"]} height="100%">
         <Flex direction="column" marginTop={["100%", "75%", "75%", "75%", "33%"]}>
-          <Heading padding="4" fontFamily="verdana" color="yellow" fontSize={["3xl", "5xl"]}>
-            Software Developer
+          <Heading padding="4" fontFamily="verdana" color="yellow" fontSize={["3xl", "5xl"]} align="center">
+            Developer
           </Heading >
-          <Text as="kbd" color="white" padding="4" >
-            Welcome to my profile page.
+          <Text as="kbd" color="white" padding="4" align="center">
+            Welcome to my profile page. <br />
+              I have been developing code since 2020. <br />
+              I am currently studying a Bachelor of Science in Computing with University of South Africa.<br />
+              This page is a starter page to just introduce myself and some of my back ground. <br />
           </Text>
-        </Flex></Box>
+        </Flex>
+      </Box>
       <Header name="Home" />
     </ChakraProvider>
   )
