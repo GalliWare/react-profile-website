@@ -3,6 +3,8 @@ import { ChakraProvider, Image, Box, Text, Heading, Flex } from "@chakra-ui/reac
 import Header from "../components/Header"
 
 function Index() {
+  let heading = process.env.NEXT_PUBLIC_INDEX_HEADING
+  let text = process.env.NEXT_PUBLIC_INDEX_TEXT
   return (
     <ChakraProvider>
       <Box backgroundColor="#222222" width="100%" position="fixed" height="100%"></Box>
@@ -12,13 +14,10 @@ function Index() {
       <Box position="fixed" width={["100%", "100%", "100%", "100%", "50%"]} marginLeft={["0", "0", "0", "0", "45%"]} height="100%">
         <Flex direction="column" marginTop={["100%", "75%", "75%", "75%", "33%"]}>
           <Heading padding="4" fontFamily="verdana" color="yellow" fontSize={["3xl", "5xl"]} align="center">
-            Developer
+            {heading}
           </Heading >
           <Text as="kbd" color="white" padding="4" align="center">
-            Welcome to my profile page. <br />
-              I have been developing code since 2020. <br />
-              I am currently studying a Bachelor of Science in Computing with University of South Africa.<br />
-              This page is a starter page to just introduce myself and some of my back ground. <br />
+            {text}
           </Text>
         </Flex>
       </Box>
