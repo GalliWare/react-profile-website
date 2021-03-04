@@ -5,8 +5,9 @@ import Header from "../components/Header"
 function Contact() {
   return (
     <ChakraProvider>
-      <Box backgroundColor="#222222" width="100%" position="fixed" height="100%"></Box>
-      <Header name="Contact Details" />
+      <Box backgroundColor="#222222" width="100%" position="fixed" height="100%">
+        <Header name="Contact Details" />
+      </Box>
     </ChakraProvider>
   )
 }
