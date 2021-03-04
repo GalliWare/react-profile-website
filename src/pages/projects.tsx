@@ -9,7 +9,7 @@ function Projects() {
   return (
     <ChakraProvider>
       <Box backgroundColor="#222222" width="100%" position="fixed" height="100%">
-        <Header name="Projects" />
+        <Header />
         <Flex width="100%" textColor="lightgreen" justifyContent="center">
           <Calculator />
           <Counter />

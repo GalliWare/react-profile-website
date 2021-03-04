@@ -21,7 +21,7 @@ function Index() {
           </Text>
         </Flex>
       </Box>
-      <Header name="Home" />
+      <Header />
     </ChakraProvider>
   )
 }

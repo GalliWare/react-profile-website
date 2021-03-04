@@ -2,10 +2,9 @@ import { Box, Button, ChakraProvider, Input, Heading } from "@chakra-ui/react"
 import { useState } from "react"
 
 function Calculator() {
-  const [total, setTotal] = useState('0')
+  const [total, setTotal] = useState(0)
   const [textInput, setTextInput] = useState('')
-  const [storedInput, setStoredInput] = useState(0)
-  const [storedOperator, setStoredOperator] = useState(0)
+  const [storedOperator, setStoredOperator] = useState('')
   const buttonsValues = ['1', '2', '3', '+', '4', '5', '6', '-', '7', '8', '9', '*', '0', '00', '/', '=']
   let buttons = []
 
@@ -17,19 +16,19 @@ function Calculator() {
       }
     }
     else {
-      if (total != '0') {
+      if (total != 0) {
         switch (storedOperator) {
           case '+':
-            setTotal(+total + +textInput); setTextInput('')
+            setTotal(total + parseFloat(textInput)); setTextInput('')
             break;
           case '-':
-            setTotal(total - textInput); setTextInput('')
+            setTotal(total - parseFloat(textInput)); setTextInput('')
             break;
           case '*':
-            setTotal(total * textInput); setTextInput('')
+            setTotal(total * parseFloat(textInput)); setTextInput('')
             break;
           case '/':
-            setTotal(total / textInput); setTextInput('')
+            setTotal(total / parseFloat(textInput)); setTextInput('')
             break;
           case '00':
             setTextInput(textInput + valueInput)
@@ -40,7 +39,7 @@ function Calculator() {
         }
       }
       else {
-        setTotal(+total + +textInput); setTextInput('')
+        setTotal(total + parseFloat(textInput)); setTextInput('')
       }
       setStoredOperator(valueInput)
     }
