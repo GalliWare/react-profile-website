@@ -3,6 +3,8 @@ import { ChakraProvider, Image, Box, Text, Heading, Flex } from "@chakra-ui/reac
 import Header from "../components/Header"
 
 function Index() {
+  // TODO: [PS-1] move env data into api.
+  // TODO: [PS-2] find better design for the text on large pages. Possible need a page design.
   const heading = process.env.NEXT_PUBLIC_INDEX_HEADING
   const textAlignmentValues = ["center", "center", "center", "center", "center", "inherit"]
   const text = [
@@ -20,6 +22,7 @@ function Index() {
     </Text>,
   ]
   const displayValues = ["inherit", "inherit", "inherit", "inherit", "inherit", "none"]
+  // TODO: [PS-2] sort out the image sizing
   const imgWidthValues = ["100%", "100%", "100%", "100%", "100%", "100%"]
   const textTopValues = ["100%", "75%", "75%", "75%", "50%", "33%"]
 
