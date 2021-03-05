@@ -3,17 +3,20 @@ import { ChakraProvider, Image, Box, Text, Heading, Flex } from "@chakra-ui/reac
 import Header from "../components/Header"
 
 function Index() {
-  // TODO: move env data into api.
   const heading = process.env.NEXT_PUBLIC_INDEX_HEADING
   const textAlignmentValues = ["center", "center", "center", "center", "center", "inherit"]
   const text = [
-    <Text key="p1" as="kbd" color="white" alignContent={textAlignmentValues}>{process.env.NEXT_PUBLIC_INDEX_TEXT_P1}
+    <Text key="p1" as="kbd" color="white" alignContent={textAlignmentValues}>
+      {process.env.NEXT_PUBLIC_INDEX_TEXT_P1}
     </Text>,
-    <Text key="p2" as="kbd" color="white" alignContent={textAlignmentValues}>{process.env.NEXT_PUBLIC_INDEX_TEXT_P2}
+    <Text key="p2" as="kbd" color="white" alignContent={textAlignmentValues}>
+      {process.env.NEXT_PUBLIC_INDEX_TEXT_P2}
     </Text>,
-    <Text key="p3" as="kbd" color="white" alignContent={textAlignmentValues}>{process.env.NEXT_PUBLIC_INDEX_TEXT_P3}
+    <Text key="p3" as="kbd" color="white" alignContent={textAlignmentValues}>
+      {process.env.NEXT_PUBLIC_INDEX_TEXT_P3}
     </Text>,
-    <Text key="p4" as="kbd" color="white" alignContent={textAlignmentValues}>{process.env.NEXT_PUBLIC_INDEX_TEXT_P4}
+    <Text key="p4" as="kbd" color="white" alignContent={textAlignmentValues}>
+      {process.env.NEXT_PUBLIC_INDEX_TEXT_P4}
     </Text>,
   ]
   const displayValues = ["inherit", "inherit", "inherit", "inherit", "inherit", "none"]
