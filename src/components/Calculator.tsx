@@ -5,7 +5,9 @@ function Calculator() {
   const [total, setTotal] = useState(0)
   const [textInput, setTextInput] = useState('')
   const [storedOperator, setStoredOperator] = useState('')
-  const buttonsValues = ['1', '2', '3', '+', '4', '5', '6', '-', '7', '8', '9', '*', '0', '00', '/', '=']
+  const buttonsValues = ['1', '2', '3', '+', '4', '5', '6', '-', '7', '8', '9', '*', '0', '00', '/',
+    '='
+  ]
   let buttons = []
 
   function onClickHandler(event) {
