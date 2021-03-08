@@ -5,8 +5,11 @@ function Calculator() {
   const [total, setTotal] = useState(0)
   const [textInput, setTextInput] = useState('')
   const [storedOperator, setStoredOperator] = useState('')
-  const buttonsValues = ['1', '2', '3', '+', '4', '5', '6', '-', '7', '8', '9', '*', '0', '00', '/',
-    '='
+  const buttonsValues = [
+    '1', '2', '3', '+',
+    '4', '5', '6', '-',
+    '7', '8', '9', '*',
+    '0', '00', '000', '/',
   ]
   let buttons = []
 
@@ -35,6 +38,9 @@ function Calculator() {
           case '00':
             setTextInput(textInput + valueInput)
             break;
+          case '000':
+            setTextInput(textInput + valueInput)
+            break;
 
           default:
             break;
@@ -51,6 +57,7 @@ function Calculator() {
     buttons.push(
       <Button
         key={buttonsValues[i]}
+        width="25%"
         size="lg"
         color="lightgreen"
         fontWeight="bold"
@@ -77,7 +84,17 @@ function Calculator() {
         </Input>
         {buttons}
         <Button
-          width="100%"
+          width="50%"
+          size="lg"
+          color="lightgreen"
+          fontWeight="bold"
+          variant="ghost"
+          _hover={{ bgColor: "lightgreen", color: "#222222" }}
+          onClick={onClickHandler}>
+          =
+        </Button>
+        <Button
+          width="50%"
           size="lg"
           color="lightgreen"
           fontWeight="bold"
