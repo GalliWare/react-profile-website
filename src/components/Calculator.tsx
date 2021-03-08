@@ -24,16 +24,20 @@ function Calculator() {
       if (total != 0) {
         switch (storedOperator) {
           case '+':
-            setTotal(total + parseFloat(textInput)); setTextInput('')
+            setTotal(total + parseFloat(textInput))
+            setTextInput('')
             break;
           case '-':
-            setTotal(total - parseFloat(textInput)); setTextInput('')
+            setTotal(total - parseFloat(textInput))
+            setTextInput('')
             break;
           case '*':
-            setTotal(total * parseFloat(textInput)); setTextInput('')
+            setTotal(total * parseFloat(textInput))
+            setTextInput('')
             break;
           case '/':
-            setTotal(total / parseFloat(textInput)); setTextInput('')
+            setTotal(total / parseFloat(textInput))
+            setTextInput('')
             break;
           case '00':
             setTextInput(textInput + valueInput)
@@ -47,7 +51,8 @@ function Calculator() {
         }
       }
       else {
-        setTotal(total + parseFloat(textInput)); setTextInput('')
+        setTotal(total + parseFloat(textInput))
+        setTextInput('')
       }
       setStoredOperator(valueInput)
     }
@@ -101,7 +106,8 @@ function Calculator() {
           variant="ghost"
           _hover={{ bgColor: "lightgreen", color: "#222222" }}
           onClick={() => {
-            setTotal(0); setTextInput('')
+            setTotal(0)
+            setTextInput('')
           }}>
           Clear
         </Button>
