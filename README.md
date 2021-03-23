@@ -1,5 +1,4 @@
-:computer: Actively Working now
-
+:computer: Actively Working On
 
 # Profile site 
 Framework for a profile site. 
