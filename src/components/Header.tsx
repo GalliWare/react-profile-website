@@ -1,4 +1,7 @@
-import { Box, Button, Flex, Avatar, ChakraProvider, Spacer, Menu, MenuButton, MenuList, MenuItem, IconButton } from "@chakra-ui/react"
+import {
+  Box, Button, Flex, Avatar, ChakraProvider, Spacer, Menu, MenuButton,
+  MenuList, MenuItem, IconButton, Heading
+} from "@chakra-ui/react"
 import { HamburgerIcon } from "@chakra-ui/icons"
 import Link from "next/link"
 
@@ -12,7 +15,7 @@ function Header() {
       <Button
         key={buttonNames[i]}
         size="lg"
-        color="lightgreen"
+        color="lightblue"
         fontWeight="bold"
         variant="ghost"
         _hover={{ borderBottom: "8px" }}>
@@ -21,6 +24,12 @@ function Header() {
         </Link>
       </Button>
     )
+  }
+
+  let heading = () => {
+    let lowerCaseHeading = window.location.pathname.split("/")[1]
+    let firstLetterUpperCaseHeading = lowerCaseHeading.replace(lowerCaseHeading[0], lowerCaseHeading[0].toUpperCase())
+    return firstLetterUpperCaseHeading
   }
 
   return (
@@ -36,6 +45,10 @@ function Header() {
           display={["none", "none", "inherit"]}>
         </Avatar>
         <Spacer />
+        <Heading color="lightblue">
+          {heading()}
+        </Heading>
+        <Spacer />
         <Box
           display={["none", "none", "inherit"]}>
           {buttons}
@@ -49,10 +62,10 @@ function Header() {
           variant="outline"
           marginLeft="90%"
           icon={<HamburgerIcon />}
-          backgroundColor="lightgreen"
+          backgroundColor="lightblue"
           display={["inherit", "inherit", "none"]}
         />
-        <MenuList backgroundColor="lightgreen">
+        <MenuList backgroundColor="lightblue">
           <MenuItem >
             <Link href="/">
               Home
