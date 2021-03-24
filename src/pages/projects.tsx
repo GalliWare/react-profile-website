@@ -14,7 +14,7 @@ function Projects() {
     <ChakraProvider>
       <Box backgroundColor="#222222" width="100%" position="fixed" height="100%">
         <Header />
-        <Flex width="100%" textColor="lightgreen" justifyContent="center">
+        <Flex width="100%" textColor="lightblue" justifyContent="center">
           {projects}
         </Flex>
       </Box>

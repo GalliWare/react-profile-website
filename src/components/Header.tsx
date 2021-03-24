@@ -42,7 +42,8 @@ function Header() {
         <Avatar
           name="Craig Gallimore"
           src="/Avatar.png"
-          display={["none", "none", "inherit"]}>
+          display={["none", "none", "inherit"]}
+          bgColor="lightblue">
         </Avatar>
         <Spacer />
         <Heading color="lightblue">

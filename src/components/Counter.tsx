@@ -12,7 +12,7 @@ function Counter() {
         <Heading color="white">{count}</Heading>
         <Button
           size="lg"
-          color="lightgreen"
+          color="lightblue"
           fontWeight="bold"
           variant="ghost"
           _hover={{
@@ -23,7 +23,7 @@ function Counter() {
         </Button>
         <Button
           size="lg"
-          color="lightgreen"
+          color="lightblue"
           fontWeight="bold"
           variant="ghost"
           _hover={{

@@ -64,10 +64,10 @@ function Calculator() {
         key={buttonsValues[i]}
         width="25%"
         size="lg"
-        color="lightgreen"
+        color="lightblue"
         fontWeight="bold"
         variant="ghost"
-        _hover={{ bgColor: "lightgreen", color: "#222222" }}
+        _hover={{ bgColor: "lightblue", color: "#222222" }}
         onClick={onClickHandler}>
         {buttonsValues[i]}
       </Button>
@@ -81,7 +81,7 @@ function Calculator() {
         <Heading marginBottom="5px" color="white">{total}</Heading>
         <Input
           type="number"
-          color="lightgreen"
+          color="lightblue"
           value={textInput}
           onChange={(e) => {
             setTextInput(e.target.value)
@@ -91,20 +91,20 @@ function Calculator() {
         <Button
           width="50%"
           size="lg"
-          color="lightgreen"
+          color="lightblue"
           fontWeight="bold"
           variant="ghost"
-          _hover={{ bgColor: "lightgreen", color: "#222222" }}
+          _hover={{ bgColor: "lightblue", color: "#222222" }}
           onClick={onClickHandler}>
           =
         </Button>
         <Button
           width="50%"
           size="lg"
-          color="lightgreen"
+          color="lightblue"
           fontWeight="bold"
           variant="ghost"
-          _hover={{ bgColor: "lightgreen", color: "#222222" }}
+          _hover={{ bgColor: "lightblue", color: "#222222" }}
           onClick={() => {
             setTotal(0)
             setTextInput('')
