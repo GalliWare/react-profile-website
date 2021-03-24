@@ -5,54 +5,49 @@ import Header from "../components/Header"
 function Index() {
   // TODO: [PS-1] move env data into api.
   // TODO: [PS-2] find better design for the text on large pages. Possible need a page design.
-  const heading = process.env.NEXT_PUBLIC_INDEX_HEADING
   const textAlignmentValues = ["center", "center", "center", "center", "center", "inherit"]
-  const text = [
-    <Text key="p1" as="kbd" color="white" alignContent={textAlignmentValues}>
-      {process.env.NEXT_PUBLIC_INDEX_TEXT_P1}
-    </Text>,
-    <Text key="p2" as="kbd" color="white" alignContent={textAlignmentValues}>
-      {process.env.NEXT_PUBLIC_INDEX_TEXT_P2}
-    </Text>,
-    <Text key="p3" as="kbd" color="white" alignContent={textAlignmentValues}>
-      {process.env.NEXT_PUBLIC_INDEX_TEXT_P3}
-    </Text>,
-    <Text key="p4" as="kbd" color="white" alignContent={textAlignmentValues}>
-      {process.env.NEXT_PUBLIC_INDEX_TEXT_P4}
-    </Text>,
-  ]
   const displayValues = ["inherit", "inherit", "inherit", "inherit", "inherit", "none"]
   // TODO: [PS-2] sort out the image sizing
-  const imgWidthValues = ["100%", "100%", "100%", "100%", "100%", "100%"]
-  const textTopValues = ["100%", "75%", "75%", "75%", "50%", "33%"]
+  const imgWidthValues = ["100%", "100%", "100%", "100%", "100%", "50%"]
+  const textTopValues = ["100%", "80%", "80%", "80%", "50%", "25%"]
+  const textLeftValues = ["0", "0", "0", "0", "50%", "50%"]
 
   return (
     <ChakraProvider>
       <Box
-        backgroundColor="#222222" width="100%" position="fixed" height="100%">
+        backgroundColor="#222222"
+        width="100%"
+        position="fixed"
+        height="100%">
         <Image
           src="/indexImage.jpg"
           width={imgWidthValues}
-          position="fixed">
+          position="fixed"
+          alt="Profile Photo"
+        >
         </Image>
         <Box
           display={displayValues}
-          width="100%" position="fixed" height="100%"
+          width="100%"
+          position="fixed"
+          height="100%"
           bgGradient="linear(to-t, #222222, #222222, #222222, transparent , transparent)">
         </Box>
         <Box
           position="fixed"
-          width={imgWidthValues}
-          height="100%">
+          marginTop={textTopValues}
+          marginLeft={textLeftValues}>
           <Flex
             direction="column"
-            marginTop={textTopValues}>
+          >
             <Heading
-              padding="4" fontFamily="verdana" color="yellow"
-              fontSize={["3xl", "5xl"]} alignContent={textAlignmentValues}>
-              {heading}
+              padding="4"
+              fontFamily="verdana"
+              color="lightblue"
+              fontSize={["3xl", "5xl"]}
+              alignContent={textAlignmentValues}>
+              Software Developer
             </Heading >
-            {text}
           </Flex>
         </Box>
         <Header />
