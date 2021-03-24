@@ -26,11 +26,16 @@ function Header() {
     )
   }
 
-  let heading = () => {
-    let lowerCaseHeading = window.location.pathname.split("/")[1]
-    let firstLetterUpperCaseHeading = lowerCaseHeading.replace(lowerCaseHeading[0], lowerCaseHeading[0].toUpperCase())
-    return firstLetterUpperCaseHeading
-  }
+  // TODO: [REACTPS-3] Find a different way to display the Heading in the header as this function breaks on refresh, as the window is not definded yet so next error's out
+  // let heading = () => {
+  //   console.log(Window)
+  //   let lowerCaseHeading = window.location.pathname.split("/")[1]
+  //   console.log(lowerCaseHeading)
+  //   if (lowerCaseHeading) {
+  //     let firstLetterUpperCaseHeading = lowerCaseHeading.replace(lowerCaseHeading[0], lowerCaseHeading[0].toUpperCase())
+  //     return firstLetterUpperCaseHeading
+  //   }
+  // }
 
   return (
     <ChakraProvider>
@@ -47,7 +52,7 @@ function Header() {
         </Avatar>
         <Spacer />
         <Heading color="lightblue">
-          {heading()}
+          {/* {heading()} */}
         </Heading>
         <Spacer />
         <Box
