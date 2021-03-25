@@ -1,7 +1,8 @@
+# Profile site
+
 :card_file_box: Backlog
 
-# Profile site 
-Framework for a profile site. 
+Framework for a profile site.
 
 ## Technologies
 
