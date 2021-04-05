@@ -1,6 +1,4 @@
-# Profile site
-
-:card_file_box: Backlog
+# Profile site (not finished)
 
 Framework for a profile site.
 
