@@ -1,26 +1,15 @@
-# dev files
-webpack.config.js
-.babelrc
-
 # Dependency directories
 node_modules/
-jspm_packages/
 
 # dotenv environment variables file
 .env
-.env.test
-
-# Output of 'npm pack'
-*.tgz
 
 # Optional npm cache directory
 .npm
 
-# Ignore the systemd service file
-*.service
-
-# next js directory
+# next js dev files
 .next/
+next-env.d.ts
 
 # ignore public folder, so assets stay of github
 public
