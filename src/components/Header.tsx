@@ -1,5 +1,5 @@
 import {
-  Box, Button, Flex, Avatar, ChakraProvider, Spacer, Menu, MenuButton,
+  Box, Button, Flex, ChakraProvider, Spacer, Menu, MenuButton,
   MenuList, MenuItem, IconButton, Heading
 } from "@chakra-ui/react"
 import { HamburgerIcon } from "@chakra-ui/icons"
@@ -26,17 +26,6 @@ function Header() {
     )
   }
 
-  // TODO: [REACTPS-3] Find a different way to display the Heading in the header as this function breaks on refresh, as the window is not definded yet so next error's out
-  // let heading = () => {
-  //   console.log(Window)
-  //   let lowerCaseHeading = window.location.pathname.split("/")[1]
-  //   console.log(lowerCaseHeading)
-  //   if (lowerCaseHeading) {
-  //     let firstLetterUpperCaseHeading = lowerCaseHeading.replace(lowerCaseHeading[0], lowerCaseHeading[0].toUpperCase())
-  //     return firstLetterUpperCaseHeading
-  //   }
-  // }
-
   return (
     <ChakraProvider>
       <Flex
@@ -44,15 +33,10 @@ function Header() {
         justify="space-between"
         as="nav"
         wrap="wrap">
-        <Avatar
-          name="Craig Gallimore"
-          src="/Avatar.png"
-          display={["none", "none", "inherit"]}
-          bgColor="lightblue">
-        </Avatar>
-        <Spacer />
-        <Heading color="lightblue">
-          {/* {heading()} */}
+        <Heading
+          color="lightblue"
+        >
+          Galliware by Craig Gallimore
         </Heading>
         <Spacer />
         <Box
