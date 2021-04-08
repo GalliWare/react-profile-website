@@ -1,13 +1,13 @@
 import {
   Box, Button, Flex, ChakraProvider, Spacer, Menu, MenuButton,
-  MenuList, MenuItem, IconButton, Heading
+  MenuList, MenuItem, IconButton, Heading, Link
 } from "@chakra-ui/react"
 import { HamburgerIcon } from "@chakra-ui/icons"
-import Link from "next/link"
+import link from "next/link"
 
-function Header() {
-  const paths = ["/", "/about", "/projects", "/contact"]
-  const buttonNames = ["Home", "About", "Projects", "Contact"]
+function Header({ title }) {
+  const paths = ["/", "/about", "/projects"]
+  const buttonNames = ["Home", "About", "Projects"]
   let buttons = []
 
   for (let i = 0; i < paths.length; i++) {
@@ -19,7 +19,7 @@ function Header() {
         fontWeight="bold"
         variant="ghost"
         _hover={{ borderBottom: "8px" }}>
-        <Link href={paths[i]}>
+        <Link as={link} href={paths[i]}>
           {buttonNames[i]}
         </Link>
       </Button>
@@ -38,6 +38,8 @@ function Header() {
         >
           Galliware by Craig Gallimore
         </Heading>
+        <Spacer />
+        <Heading color="lightblue">{title}</Heading>
         <Spacer />
         <Box
           display={["none", "none", "inherit"]}>
