@@ -1,4 +1,4 @@
-import { Box, Button, ChakraProvider, Input, Heading } from "@chakra-ui/react"
+import { Box, Button, Input, Heading } from "@chakra-ui/react"
 import { useState } from "react"
 
 function Calculator() {
@@ -75,44 +75,42 @@ function Calculator() {
   }
 
   return (
-    <ChakraProvider>
-      <Box height="50px" width="250px" padding="5px" align="center" margin="10px">
-        <Heading size="lg">Basic Calculator </Heading>
-        <Heading marginBottom="5px" color="white">{total}</Heading>
-        <Input
-          type="number"
-          color="lightblue"
-          value={textInput}
-          onChange={(e) => {
-            setTextInput(e.target.value)
-          }}>
-        </Input>
-        {buttons}
-        <Button
-          width="50%"
-          size="lg"
-          color="lightblue"
-          fontWeight="bold"
-          variant="ghost"
-          _hover={{ bgColor: "lightblue", color: "#222222" }}
-          onClick={onClickHandler}>
-          =
-        </Button>
-        <Button
-          width="50%"
-          size="lg"
-          color="lightblue"
-          fontWeight="bold"
-          variant="ghost"
-          _hover={{ bgColor: "lightblue", color: "#222222" }}
-          onClick={() => {
-            setTotal(0)
-            setTextInput('')
-          }}>
-          Clear
-        </Button>
-      </Box>
-    </ChakraProvider>
+    <Box height="50px" width="250px" padding="5px" align="center" margin="10px">
+      <Heading size="lg" marginBottom={4}>Basic Calculator </Heading>
+      <Heading color="lightpink" marginBottom={2}>{total}</Heading>
+      <Input
+        type="number"
+        color="lightpink"
+        value={textInput}
+        onChange={(e) => {
+          setTextInput(e.target.value)
+        }}>
+      </Input>
+      {buttons}
+      <Button
+        width="50%"
+        size="lg"
+        color="lightblue"
+        fontWeight="bold"
+        variant="ghost"
+        _hover={{ bgColor: "lightblue", color: "#222222" }}
+        onClick={onClickHandler}>
+        =
+      </Button>
+      <Button
+        width="50%"
+        size="lg"
+        color="lightblue"
+        fontWeight="bold"
+        variant="ghost"
+        _hover={{ bgColor: "lightblue", color: "#222222" }}
+        onClick={() => {
+          setTotal(0)
+          setTextInput('')
+        }}>
+        Clear
+      </Button>
+    </Box>
   )
 }
 
