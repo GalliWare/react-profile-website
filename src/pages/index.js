@@ -1,6 +1,7 @@
 import React from "react"
-import { ChakraProvider, Box, Text, Heading, Flex, Image } from "@chakra-ui/react"
+import { ChakraProvider, Box, Text, Heading, Flex, Image, Link } from "@chakra-ui/react"
 import Header from "../components/Header"
+import link from "next/link"
 
 function Index() {
   const textAlignmentValues = ["center", "center", "center", "inherit", "inherit", "inherit"]
@@ -56,26 +57,31 @@ function Index() {
               color="white"
               fontSize={["m", "lg"]}
               alignContent={textAlignmentValues}
-            > Welcome to my simple webpage.
+              fontFamily="verdana"
+            > Welcome to my simple webpage. (Still a work in progress)
             </Text>
             <Text
               marginLeft="5"
               color="white"
               fontSize={["m", "lg"]}
-            > You can find more information about me under the about tab
-              or if you looking to see some of my small projects you can check out the projects tab.
-              Under that tab you will also find some links to my github repo for some larger project that are not running under this site.
+              fontFamily="verdana"
+            > You can find more information about me under
+              the <Link as={link} href="/about">About</Link> tab.
             </Text>
             <Text
               marginLeft="5"
               color="white"
               fontSize={["m", "lg"]}
-            > Under the contact tab you can find different ways to get in touch.
+              fontFamily="verdana"
+            >
+              If you looking to see some of my small projects, you can check out
+              the <Link as={link} href="/projects">Projects</Link> tab.
+              Under that tab you will also find some links to repos for projects that are maybe not
+              currently up and running or that are not web projects..
             </Text>
-            <Text></Text>
           </Flex>
         </Box>
-        <Header />
+        <Header title="Home" />
       </Box>
     </ChakraProvider >
   )
