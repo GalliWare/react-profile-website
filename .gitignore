@@ -7,9 +7,9 @@ node_modules/
 # Optional npm cache directory
 .npm
 
-# next js dev files
+# next js dev files & folders
 .next/
 next-env.d.ts
-
-# ignore public folder, so assets stay of github
+next.config.js
 public
+out
