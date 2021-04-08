@@ -1,6 +1,6 @@
 # Profile site (not finished)
 
-Framework for a profile site.
+A profile website I am working on for my galliware.dev domain.
 
 ## Technologies
 
