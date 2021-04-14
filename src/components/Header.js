@@ -6,6 +6,7 @@ import { HamburgerIcon } from "@chakra-ui/icons"
 import link from "next/link"
 
 function Header({ title }) {
+  const colour = { backgroundColor: "lightblue", color: "#222222" }
   const paths = ["/", "/about", "/projects"]
   const buttonNames = ["Home", "About", "Projects"]
   let buttons = []
@@ -15,7 +16,7 @@ function Header({ title }) {
       <Button
         key={buttonNames[i]}
         size="lg"
-        color="lightblue"
+        color={colour.color}
         fontWeight="bold"
         variant="ghost"
         _hover={{ borderBottom: "8px" }}>
@@ -32,14 +33,15 @@ function Header({ title }) {
         p={["0", "1", "3"]}
         justify="space-between"
         as="nav"
-        wrap="wrap">
+        wrap="wrap"
+        backgroundColor={colour.backgroundColor}
+        color={colour.color}>
         <Heading
-          color="lightblue"
         >
           Galliware by Craig Gallimore
         </Heading>
         <Spacer />
-        <Heading color="lightblue">{title}</Heading>
+        <Heading >{title}</Heading>
         <Spacer />
         <Box
           display={["none", "none", "inherit"]}>
