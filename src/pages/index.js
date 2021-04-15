@@ -9,7 +9,7 @@ function Index() {
   const textTopValues = ["100%", "80%", "80%", "20%", "20%", "20%"]
   const textLeftValues = ["0", "0", "0", "50%", "50%", "50%"]
   const imgWidthValues = ["100%", "100%", "100%", "50%", "50%", "50%"]
-  const imgTopValues = ["0", "0", "0", "7%", "5%", "4%"]
+  const imgTopValues = ["0", "0", "0", "7%", "6%", "6%"]
 
   return (
     <ChakraProvider>
@@ -18,6 +18,7 @@ function Index() {
         width="100%"
         position="fixed"
         height="100%"
+        color="white"
       >
         <Image
           src="\index.jpg"
@@ -46,7 +47,6 @@ function Index() {
           >
             <Heading
               padding="4"
-              fontFamily="verdana"
               color="lightblue"
               fontSize={["3xl", "5xl"]}
               alignContent={textAlignmentValues}
@@ -54,25 +54,19 @@ function Index() {
             </Heading >
             <Text
               marginLeft="5"
-              color="white"
               fontSize={["m", "lg"]}
               alignContent={textAlignmentValues}
-              fontFamily="verdana"
             > Welcome to my simple webpage. (Still a work in progress)
             </Text>
             <Text
               marginLeft="5"
-              color="white"
               fontSize={["m", "lg"]}
-              fontFamily="verdana"
             > You can find more information about me under
               the <Link as={link} href="/about">About</Link> tab.
             </Text>
             <Text
               marginLeft="5"
-              color="white"
               fontSize={["m", "lg"]}
-              fontFamily="verdana"
             >
               If you looking to see some of my small projects, you can check out
               the <Link as={link} href="/projects">Projects</Link> tab.
