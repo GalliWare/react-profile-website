@@ -2,9 +2,9 @@ import { Box, Heading, Circle, Square, CircularProgress } from "@chakra-ui/react
 import React, { useState, useEffect } from "react"
 
 function Clock() {
-  const [hour, setHour] = useState()
-  const [minute, setMinute] = useState()
-  const [second, setSecond] = useState()
+  const [hour, setHour] = useState(0)
+  const [minute, setMinute] = useState(0)
+  const [second, setSecond] = useState(0)
   useEffect(() => {
     let clockUpdate = setInterval(() => {
       let hour = new Date().getHours()
