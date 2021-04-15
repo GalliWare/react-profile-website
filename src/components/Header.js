@@ -1,5 +1,5 @@
 import {
-  Box, Button, Flex, ChakraProvider, Spacer, Menu, MenuButton,
+  Box, Button, Flex, Spacer, Menu, MenuButton,
   MenuList, MenuItem, IconButton, Heading, Link
 } from "@chakra-ui/react"
 import { HamburgerIcon } from "@chakra-ui/icons"
@@ -28,7 +28,7 @@ function Header({ title }) {
   }
 
   return (
-    <ChakraProvider>
+    <Box>
       <Flex
         p={["0", "1", "3"]}
         justify="space-between"
@@ -82,7 +82,7 @@ function Header({ title }) {
           </MenuItem>
         </MenuList>
       </Menu>
-    </ChakraProvider>
+    </Box>
   )
 }
 
