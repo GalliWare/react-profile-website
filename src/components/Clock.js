@@ -20,7 +20,7 @@ function Clock() {
 
   return (
     <Box height="50px" width="250px" padding="5px" align="center" margin="10px">
-      <Heading size="lg" marginBottom={4}>Basic Clock </Heading>
+      <Heading size="lg" marginBottom={4}>Basic Clocks </Heading>
       <Heading color="lightpink" marginBottom={4}>{(hour + ":" + minute + ":" + second)}</Heading>
       <Circle size="200px">
         <Square
