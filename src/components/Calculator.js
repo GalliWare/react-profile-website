@@ -75,41 +75,43 @@ function Calculator() {
   }
 
   return (
-    <Box height="50px" width="250px" padding="5px" align="center" margin="10px">
-      <Heading size="lg" marginBottom={4}>Basic Calculator </Heading>
-      <Heading color="lightpink" marginBottom={2}>{total}</Heading>
-      <Input
-        type="number"
-        color="lightpink"
-        value={textInput}
-        onChange={(e) => {
-          setTextInput(e.target.value)
-        }}>
-      </Input>
-      {buttons}
-      <Button
-        width="50%"
-        size="lg"
-        color="lightblue"
-        fontWeight="bold"
-        variant="ghost"
-        _hover={{ bgColor: "lightblue", color: "#222222" }}
-        onClick={onClickHandler}>
-        =
-      </Button>
-      <Button
-        width="50%"
-        size="lg"
-        color="lightblue"
-        fontWeight="bold"
-        variant="ghost"
-        _hover={{ bgColor: "lightblue", color: "#222222" }}
-        onClick={() => {
-          setTotal(0)
-          setTextInput('')
-        }}>
-        Clear
-      </Button>
+    <Box align="center">
+      <Heading size="3xl" marginBottom={4}>Basic Calculator </Heading>
+      <Box height="50px" width="250px" padding="5px" align="center" margin="10px">
+        <Heading color="red" marginBottom={2}>{total}</Heading>
+        <Input
+          type="number"
+          color="red"
+          value={textInput}
+          onChange={(e) => {
+            setTextInput(e.target.value)
+          }}>
+        </Input>
+        {buttons}
+        <Button
+          width="50%"
+          size="lg"
+          color="lightblue"
+          fontWeight="bold"
+          variant="ghost"
+          _hover={{ bgColor: "lightblue", color: "#222222" }}
+          onClick={onClickHandler}>
+          =
+        </Button>
+        <Button
+          width="50%"
+          size="lg"
+          color="lightblue"
+          fontWeight="bold"
+          variant="ghost"
+          _hover={{ bgColor: "lightblue", color: "#222222" }}
+          onClick={() => {
+            setTotal(0)
+            setTextInput('')
+          }}>
+          Clear
+        </Button>
+      </Box>
     </Box>
   )
 }
