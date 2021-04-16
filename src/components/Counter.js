@@ -5,9 +5,9 @@ import { useState } from 'react'
 function Counter() {
   const [count, setCount] = useState(0)
   return (
-    <Box height="50px" width="250px" padding="5px" align="center" margin="10px">
-      <Heading size="lg" marginBottom={4}>Basic Counter </Heading>
-      <Heading color="lightpink" marginBottom={2}>{count}</Heading>
+    <Box padding="5px" align="center" margin="10px">
+      <Heading size="3xl" marginBottom={4}>Basic Counter </Heading>
+      <Heading color="red" marginBottom={2}>{count}</Heading>
       <Button
         size="lg"
         color="lightblue"
