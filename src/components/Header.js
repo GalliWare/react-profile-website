@@ -6,7 +6,7 @@ import { HamburgerIcon } from "@chakra-ui/icons"
 import link from "next/link"
 
 function Header({ title }) {
-  const colour = { backgroundColor: "lightblue", color: "#222222" }
+  const colour = { heading: "lightblue", color: "Yellow" }
   const paths = ["/", "/about", "/projects"]
   const buttonNames = ["Home", "About", "Projects"]
   let buttons = []
@@ -34,54 +34,51 @@ function Header({ title }) {
         justify="space-between"
         as="nav"
         wrap="wrap"
-        backgroundColor={colour.backgroundColor}
         color={colour.color}>
         <Heading
+          display={["none", "none", "none", "inherit"]}
         >
-          Galliware by Craig Gallimore
+          Craig Gallimore
         </Heading>
         <Spacer />
-        <Heading >{title}</Heading>
+        <Heading
+          color={colour.heading}
+        >{title}</Heading>
         <Spacer />
         <Box
           display={["none", "none", "inherit"]}>
           {buttons}
         </Box>
+        <Menu >
+          <MenuButton
+            as={IconButton}
+            aria-label="Options"
+            size="md"
+            variant="outline"
+            marginLeft="86%"
+            icon={<HamburgerIcon />}
+            display={["inherit", "inherit", "none"]}
+            position="fixed"
+          />
+          <MenuList>
+            <MenuItem >
+              <Link href="/">
+                Home
+              </Link>
+            </MenuItem>
+            <MenuItem >
+              <Link href="/about">
+                About
+              </Link>
+            </MenuItem>
+            <MenuItem >
+              <Link href="/projects">
+                Projects
+              </Link>
+            </MenuItem>
+          </MenuList>
+        </Menu>
       </Flex>
-      <Menu >
-        <MenuButton
-          as={IconButton}
-          aria-label="Options"
-          size="md"
-          variant="outline"
-          marginLeft="90%"
-          icon={<HamburgerIcon />}
-          backgroundColor="lightblue"
-          display={["inherit", "inherit", "none"]}
-        />
-        <MenuList backgroundColor="lightblue">
-          <MenuItem >
-            <Link href="/">
-              Home
-            </Link>
-          </MenuItem>
-          <MenuItem >
-            <Link href="/about">
-              About
-            </Link>
-          </MenuItem>
-          <MenuItem >
-            <Link href="/projects">
-              Projects
-            </Link>
-          </MenuItem>
-          <MenuItem >
-            <Link href="/contact">
-              Contact
-            </Link>
-          </MenuItem>
-        </MenuList>
-      </Menu>
     </Box>
   )
 }
