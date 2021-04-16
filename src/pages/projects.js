@@ -1,5 +1,5 @@
 import React from "react"
-import { ChakraProvider, Box, Flex } from "@chakra-ui/react"
+import { ChakraProvider, Flex, Tabs, Tab, TabPanels, TabPanel, TabList } from "@chakra-ui/react"
 import Header from "../components/Header"
 import Calculator from "../components/Calculator"
 import Counter from "../components/Counter"
@@ -7,19 +7,35 @@ import Clock from '../components/Clock';
 
 
 function Projects() {
-  const projects = [
-    <Calculator />,
-    <Counter />,
-    <Clock />
-  ]
   return (
     <ChakraProvider>
-      <Box backgroundColor="#222222" width="100%" position="fixed" height="100%">
-        <Header title="Projects" />
-        <Flex width="100%" textColor="lightblue" justifyContent="center">
-          {projects}
-        </Flex>
-      </Box>
+      <Header title="Projects" />
+      <Tabs align="center">
+        <TabList>
+          <Tab>Clocks</Tab>
+          <Tab>Calculator</Tab>
+          <Tab>Counter</Tab>
+        </TabList>
+
+        <TabPanels>
+          <TabPanel>
+            <Flex width="100%" textColor="yellow" justifyContent="center">
+              <Clock />
+            </Flex>
+          </TabPanel>
+          <TabPanel>
+            <Flex width="100%" textColor="yellow" justifyContent="center">
+              <Calculator />
+            </Flex>
+          </TabPanel>
+          <TabPanel>
+            <Flex width="100%" textColor="yellow" justifyContent="center">
+              <Counter />
+            </Flex>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
+
     </ChakraProvider>
   )
 }
