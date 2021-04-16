@@ -1,5 +1,5 @@
 import React from "react"
-import { ChakraProvider, Box, Text, Heading, Flex, Spacer, Link } from "@chakra-ui/react"
+import { ChakraProvider, Text, Heading, Link, Tabs, Tab, TabPanels, TabPanel, TabList } from "@chakra-ui/react"
 import Header from "../components/Header"
 import JobCard from "../components/JobCard"
 import ContactCard from "../components/ContactCard"
@@ -36,152 +36,161 @@ function About() {
     }
   }
   const currentDate = month() + " " + new Date().getFullYear()
+  const colors = { "headings": "yellow" }
 
   return (
     <ChakraProvider >
       <Header title="About" />
-      <Flex
-        direction="column"
-        align="center"
-        color="lightblue"
-        backgroundColor="#222222"
-        height="100%"
-        width="100%"
-        css={{
-          '&::-webkit-scrollbar': {
-            display: "none",
-          },
-        }}
-      >
-        <Box marginTop="5">
-          <Heading
-            padding="4"
-            fontSize={["3xl", "5xl"]}
-            align="center"
-          > About Me
-          </Heading>
-          <Text
-            marginLeft="5"
-            color="white"
-            fontSize={["m", "lg"]}
-            align="center"
-          >
-            I am currently studying a Bachelor of Science in Computing,
-            with <Link href="https://www.unisa.ac.za/" isExternal>UNISA </Link>,
-            to improve my development skills and theoretical knowledge.
-          </Text>
-          <Text
-            marginLeft="5"
-            color="white"
-            fontSize={["m", "lg"]}
-            align="center"
-          >
-            I made the decision to go back to full time studying, as I really enjoy programing and
-            finding a solution to a idea or problem.
-          </Text>
-          <Text
-            marginLeft="5"
-            color="white"
-            fontSize={["m", "lg"]}
-            align="center"
-          >
-            I found my enjoyment of coding when I was doing a lot of Powershell coding at Jane Street
-            and more recently in my free time I start to learn JavaScript and then use the React framework
-            to make some basic sites.
-          </Text>
-        </Box>
-        <Box marginTop="5">
-          <Heading
-            padding="4"
-            fontSize={"5xl"}
-            align="center"
-          > Work Experience
-          </Heading>
-          <JobCard
-            company="DigiOutsource"
-            jobTitle="IT Support Technician"
-            startTime="April 2020"
-            endTime="January 2021"
-            location="Cape Town"
-          />
-          <JobCard
-            company="Jane Street"
-            jobTitle="Windows Administrator"
-            startTime="September 2017"
-            endTime="July 2019"
-            location="London"
-          />
-          <JobCard
-            company="Omni Partners LLP"
-            jobTitle="Systems Analyst"
-            startTime="June 2017"
-            endTime="August 2017"
-            location="London"
-          />
-          <JobCard
-            company="DigiOutsource International"
-            jobTitle="IT Support Technician"
-            startTime="May 2016"
-            endTime="June 2017"
-            location="London"
-          />
-          <JobCard
-            company="DigiOutsource"
-            jobTitle="IT Support Agent"
-            startTime="January 2016"
-            endTime="May 2016"
-            location="Cape Town"
-          />
-        </Box>
-        <Box marginTop="5">
-          <Heading align="center">Contact Me</Heading>
-          <ContactCard
-            method="Email"
-            info="craig.gallimore@outlook.com"
-          />
-          <ContactCard
-            method="Github"
-            info="https://github.com/GalliWare"
-          />
-        </Box>
-        <Box marginTop="5">
-          <Heading
-            padding="4"
-            fontFamily="verdana"
-            fontSize={["3xl", "5xl"]}
-            align="center"
-          > Education
-          </Heading>
-          <JobCard
-            company="UNISA"
-            jobTitle="Bachelor of Science in Computing"
-            startTime="January 2021"
-            endTime={currentDate}
-            location="Cape Town"
-          />
-          <JobCard
-            company="UNISA"
-            jobTitle="Bachelor of Business Administration"
-            startTime="January 2011"
-            endTime="December 2014"
-            location="Cape Town"
-          />
-          <JobCard
-            company="ETA"
-            jobTitle="Diploma in Personal Training"
-            startTime="January 2009"
-            endTime="Decemeber 2010"
-            location="Cape Town"
-          />
-          <JobCard
-            company="St Peter's College Johannesburg"
-            jobTitle="Matriculation"
-            startTime="January 2004"
-            endTime="Decemenber 2008"
-            location="Johannesburg"
-          />
-        </Box>
-      </Flex>
+      <Tabs align="center">
+        <TabList>
+          <Tab>About</Tab>
+          <Tab>Experience</Tab>
+          <Tab>Education</Tab>
+          <Tab>Contact</Tab>
+        </TabList>
+
+        <TabPanels>
+          <TabPanel>
+            <Heading
+              padding="4"
+              fontFamily="verdana"
+              fontSize={["3xl", "5xl"]}
+              align="center"
+              color={colors.headings}
+            > About Me
+            </Heading>
+            <Text
+              marginLeft="5"
+              color="white"
+              fontSize={["m", "lg"]}
+              align="center"
+            >
+              I am currently studying a Bachelor of Science in Computing,
+              with <Link href="https://www.unisa.ac.za/" isExternal>UNISA </Link>,
+              to improve my development skills and theoretical knowledge.
+            </Text>
+            <Text
+              marginLeft="5"
+              color="white"
+              fontSize={["m", "lg"]}
+              align="center"
+            >
+              I made the decision to go back to full time studying, as I really enjoy programing and
+              finding a solution to a idea or problem.
+            </Text>
+            <Text
+              marginLeft="5"
+              color="white"
+              fontSize={["m", "lg"]}
+              align="center"
+            >
+              I found my enjoyment of coding when I was doing a lot of Powershell coding at Jane Street
+              and more recently in my free time I start to learn JavaScript and then use the React framework
+              to make some basic sites.
+            </Text>
+          </TabPanel>
+          <TabPanel>
+            <Heading
+              padding="4"
+              fontFamily="verdana"
+              fontSize={["3xl", "5xl"]}
+              align="center"
+              color={colors.headings}
+            > Work Experience
+            </Heading>
+            <JobCard
+              company="DigiOutsource"
+              jobTitle="IT Support Technician"
+              startTime="April 2020"
+              endTime="January 2021"
+              location="Cape Town"
+            />
+            <JobCard
+              company="Jane Street"
+              jobTitle="Windows Administrator"
+              startTime="September 2017"
+              endTime="July 2019"
+              location="London"
+            />
+            <JobCard
+              company="Omni Partners LLP"
+              jobTitle="Systems Analyst"
+              startTime="June 2017"
+              endTime="August 2017"
+              location="London"
+            />
+            <JobCard
+              company="DigiOutsource International"
+              jobTitle="IT Support Technician"
+              startTime="May 2016"
+              endTime="June 2017"
+              location="London"
+            />
+            <JobCard
+              company="DigiOutsource"
+              jobTitle="IT Support Agent"
+              startTime="January 2016"
+              endTime="May 2016"
+              location="Cape Town"
+            />
+          </TabPanel>
+          <TabPanel>
+            <Heading
+              padding="4"
+              fontFamily="verdana"
+              fontSize={["3xl", "5xl"]}
+              align="center"
+              color={colors.headings}
+            > Education
+            </Heading>
+            <JobCard
+              company="UNISA"
+              jobTitle="Bachelor of Science in Computing"
+              startTime="January 2021"
+              endTime={currentDate}
+              location="Cape Town"
+            />
+            <JobCard
+              company="UNISA"
+              jobTitle="Bachelor of Business Administration"
+              startTime="January 2011"
+              endTime="December 2014"
+              location="Cape Town"
+            />
+            <JobCard
+              company="ETA"
+              jobTitle="Diploma in Personal Training"
+              startTime="January 2009"
+              endTime="Decemeber 2010"
+              location="Cape Town"
+            />
+            <JobCard
+              company="St Peter's College Johannesburg"
+              jobTitle="Matriculation"
+              startTime="January 2004"
+              endTime="Decemenber 2008"
+              location="Johannesburg"
+            />
+          </TabPanel>
+          <TabPanel>
+            <Heading
+              padding="4"
+              fontFamily="verdana"
+              fontSize={["3xl", "5xl"]}
+              align="center"
+              color={colors.headings}
+            >Contact Me</Heading>
+            <ContactCard
+              method="Email"
+              info="craig.gallimore@outlook.com"
+            />
+            <ContactCard
+              method="Github"
+              info="https://github.com/GalliWare"
+            />
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
     </ChakraProvider>
   )
 }
