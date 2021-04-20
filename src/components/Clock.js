@@ -16,12 +16,17 @@ function Clock() {
 
     return () => clearInterval(clockUpdate)
   })
+  console.log(time.split(':'))
 
   return (
     <Box padding="5px" margin="10px">
       <Heading size="3xl" marginBottom={4} align="center">Basic Clocks </Heading>
       <Flex direction={["column", "row"]}>
-        <Heading color="lightpink" marginBottom={4} margin="5px" align="center">{time}</Heading>
+        <Flex direction={"row"}>
+          <Heading color="lightpink">{time.split(":")[0]}:</Heading>
+          <Heading color="lightblue">{time.split(":")[1]}:</Heading>
+          <Heading color="lightgreen">{time.split(":")[2]}</Heading>
+        </Flex>
         <Box>
           <Circle
             size="200px"
@@ -44,14 +49,14 @@ function Clock() {
             <Square
               width="120px"
               height="6px"
-              bgGradient="linear(to-l, lightpink, lightpink, transparent, transparent , transparent)"
+              bgGradient="linear(to-l, lightblue, lightblue, transparent, transparent , transparent)"
               position="fixed"
               transform={"rotate(" + ((minute * 6) - 90) + "deg)"}
             />
             <Square
               width="180px"
               height="3px"
-              bgGradient="linear(to-l, lightpink, lightpink, transparent, transparent , transparent)"
+              bgGradient="linear(to-l, lightgreen, lightgreen, transparent, transparent , transparent)"
               position="fixed"
               transform={"rotate(" + ((second * 6) - 90) + "deg)"}
             />
@@ -62,7 +67,7 @@ function Clock() {
             size="240px"
             thickness="5px"
             trackColor="black"
-            color="lightpink"
+            color="lightgreen"
             value={((second / 60) * 100)}
             position="fixed"
           />
@@ -72,7 +77,7 @@ function Clock() {
             size="220px"
             thickness="5px"
             trackColor="black"
-            color="lightpink"
+            color="lightblue"
             value={((minute / 60) * 100)}
             position="fixed"
           />
