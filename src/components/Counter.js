@@ -27,6 +27,17 @@ function Counter() {
         _hover={{
           borderBottom: "8px"
         }}
+        onClick={() => setCount(0)}>
+        reset
+      </Button>
+      <Button
+        size="lg"
+        color="lightblue"
+        fontWeight="bold"
+        variant="ghost"
+        _hover={{
+          borderBottom: "8px"
+        }}
         onClick={() => setCount(count + 1)}>
         +
       </Button>
