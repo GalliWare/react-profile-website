@@ -12,9 +12,21 @@ function Projects() {
     <Box>
       <Tabs align="center" variant="unstyled" color="lightblue">
         <TabList>
-          <Tab _selected={{ color: "black", bg: "lightblue" }} _hover={{ borderBottom: "8px" }}>Clocks</Tab>
-          <Tab _selected={{ color: "black", bg: "lightblue" }} _hover={{ borderBottom: "8px" }}>Calculator</Tab>
-          <Tab _selected={{ color: "black", bg: "lightblue" }} _hover={{ borderBottom: "8px" }}>Counter</Tab>
+          <Tab
+            _selected={{ color: "black", bg: "lightblue" }}
+            _hover={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+          >
+            Clocks</Tab>
+          <Tab
+            _selected={{ color: "black", bg: "lightblue" }}
+            _hover={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+          >
+            Calculator</Tab>
+          <Tab
+            _selected={{ color: "black", bg: "lightblue" }}
+            _hover={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+          >
+            Counter</Tab>
         </TabList>
 
         <TabPanels>
