@@ -1,23 +1,17 @@
 import React from "react"
-import { ChakraProvider, Box, Text, Heading, Flex, Image, Link, extendTheme } from "@chakra-ui/react"
-import Header from "../components/Header"
+import { Box, Text, Heading, Flex, Image, Link } from "@chakra-ui/react"
 import link from "next/link"
 
-function Index() {
-  const config = {
-    initialColorMode: "dark",
-    useSystemColorMode: false,
-  }
-  const theme = extendTheme({ config })
-  const textAlignmentValues = ["center", "center", "center", "inherit", "inherit", "inherit"]
+function Home() {
+  const textAlignmentValues = ["center", "center", "center", "center", "center", "center"]
   const displayValues = ["inherit", "inherit", "inherit", "none", "none", "none"]
   const textTopValues = ["100%", "80%", "80%", "20%", "20%", "20%"]
   const textLeftValues = ["0", "0", "0", "50%", "50%", "50%"]
   const imgWidthValues = ["100%", "100%", "100%", "50%", "50%", "50%"]
-  const imgTopValues = ["0", "0", "0", "7%", "6%", "4%"]
+  const imgTopValues = ["0", "0", "0", "7%", "6%", "0%"]
 
   return (
-    <ChakraProvider theme={theme}>
+    <Box>
       <Image
         src="\index.jpg"
         alt="Profile photo"
@@ -76,9 +70,8 @@ function Index() {
           </Text>
         </Flex>
       </Box>
-      <Header title="Home" />
-    </ChakraProvider >
+    </Box >
   )
 }
 
-export default Index
+export default Home
