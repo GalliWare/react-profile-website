@@ -41,10 +41,10 @@ function About() {
     <Box >
       <Tabs align="center" variant="unstyled" color="lightblue">
         <TabList>
-          <Tab _selected={{ color: "black", bg: "lightblue" }}>About</Tab>
-          <Tab _selected={{ color: "black", bg: "lightblue" }}>Experience</Tab>
-          <Tab _selected={{ color: "black", bg: "lightblue" }}>Education</Tab>
-          <Tab _selected={{ color: "black", bg: "lightblue" }}>Contact</Tab>
+          <Tab _selected={{ color: "black", bg: "lightblue" }} _hover={{ borderBottom: "8px" }}>About</Tab>
+          <Tab _selected={{ color: "black", bg: "lightblue" }} _hover={{ borderBottom: "8px" }}>Experience</Tab>
+          <Tab _selected={{ color: "black", bg: "lightblue" }} _hover={{ borderBottom: "8px" }}>Education</Tab>
+          <Tab _selected={{ color: "black", bg: "lightblue" }} _hover={{ borderBottom: "8px" }}>Contact</Tab>
         </TabList>
 
         <TabPanels>

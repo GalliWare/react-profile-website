@@ -17,9 +17,9 @@ function App() {
       <Heading position="fixed" color="yellow" display={displayValues}>Craig Gallimore</Heading>
       <Tabs align="end" variant="unstyled" color="yellow">
         <TabList>
-          <Tab _selected={{ color: "black", bg: "yellow" }}>Home</Tab>
-          <Tab _selected={{ color: "black", bg: "yellow" }}>About</Tab>
-          <Tab _selected={{ color: "black", bg: "yellow" }}>Projects</Tab>
+          <Tab _selected={{ color: "black", bg: "yellow" }} _hover={{ borderBottom: "8px" }}>Home</Tab>
+          <Tab _selected={{ color: "black", bg: "yellow" }} _hover={{ borderBottom: "8px" }}>About</Tab>
+          <Tab _selected={{ color: "black", bg: "yellow" }} _hover={{ borderBottom: "8px" }}>Projects</Tab>
         </TabList>
 
         <TabPanels>
