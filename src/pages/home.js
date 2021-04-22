@@ -1,6 +1,5 @@
 import React from "react"
-import { Box, Text, Heading, Flex, Image, Link } from "@chakra-ui/react"
-import link from "next/link"
+import { Box, Text, Heading, Flex, Image } from "@chakra-ui/react"
 
 function Home() {
   const textAlignmentValues = ["center", "center", "center", "center", "center", "center"]
@@ -9,6 +8,7 @@ function Home() {
   const textLeftValues = ["0", "0", "0", "50%", "50%", "50%"]
   const imgWidthValues = ["100%", "100%", "100%", "50%", "50%", "50%"]
   const imgTopValues = ["0", "0", "0", "7%", "6%", "0%"]
+  const colors = { "heading": "lightblue", "text": "white" }
 
   return (
     <Box>
@@ -39,34 +39,36 @@ function Home() {
       >
         <Flex
           direction="column"
+          align="start"
         >
           <Heading
             padding="4"
-            color="lightblue"
+            color={colors.heading}
             fontSize={["3xl", "5xl"]}
             alignContent={textAlignmentValues}
           > Software Developer
           </Heading >
           <Text
             marginLeft="5"
+            color={colors.text}
             fontSize={["m", "lg"]}
             alignContent={textAlignmentValues}
           > Welcome to my simple webpage. (Still a work in progress)
           </Text>
           <Text
             marginLeft="5"
+            color={colors.text}
             fontSize={["m", "lg"]}
           > You can find more information about me under
-            the <Link as={link} href="/about">About</Link> tab.
+            the About tab.
           </Text>
           <Text
             marginLeft="5"
+            color={colors.text}
             fontSize={["m", "lg"]}
           >
             If you looking to see some of my small projects, you can check out
-            the <Link as={link} href="/projects">Projects</Link> tab.
-            Under that tab you will also find some links to repos for projects that are maybe not
-            currently up and running or that are not web projects..
+            the Projects tab.
           </Text>
         </Flex>
       </Box>
