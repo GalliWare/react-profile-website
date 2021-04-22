@@ -1,6 +1,5 @@
 import React from "react"
-import { ChakraProvider, Text, Heading, Link, Tabs, Tab, TabPanels, TabPanel, TabList } from "@chakra-ui/react"
-import Header from "../components/Header"
+import { Text, Heading, Link, Tabs, Tab, TabPanels, TabPanel, TabList, Box } from "@chakra-ui/react"
 import JobCard from "../components/JobCard"
 import ContactCard from "../components/ContactCard"
 
@@ -36,17 +35,16 @@ function About() {
     }
   }
   const currentDate = month() + " " + new Date().getFullYear()
-  const colors = { "headings": "yellow" }
+  const colors = { "headings": "lightgreen" }
 
   return (
-    <ChakraProvider >
-      <Header title="About" />
-      <Tabs align="center">
+    <Box >
+      <Tabs align="center" variant="unstyled" color="lightblue">
         <TabList>
-          <Tab>About</Tab>
-          <Tab>Experience</Tab>
-          <Tab>Education</Tab>
-          <Tab>Contact</Tab>
+          <Tab _selected={{ color: "black", bg: "lightblue" }}>About</Tab>
+          <Tab _selected={{ color: "black", bg: "lightblue" }}>Experience</Tab>
+          <Tab _selected={{ color: "black", bg: "lightblue" }}>Education</Tab>
+          <Tab _selected={{ color: "black", bg: "lightblue" }}>Contact</Tab>
         </TabList>
 
         <TabPanels>
@@ -191,7 +189,7 @@ function About() {
           </TabPanel>
         </TabPanels>
       </Tabs>
-    </ChakraProvider>
+    </Box>
   )
 }
 
