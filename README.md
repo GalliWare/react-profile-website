@@ -1,6 +1,6 @@
 # Profile site (not finished)
 
-A profile website I am working on for my galliware.dev domain.
+A profile website I am working on for my galliware.dev domain. This is a single page static site.
 
 ## Technologies
 
