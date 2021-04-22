@@ -16,16 +16,15 @@ function Clock() {
 
     return () => clearInterval(clockUpdate)
   })
-  console.log(time.split(':'))
 
   return (
     <Box padding="5px" margin="10px">
       <Heading size="3xl" marginBottom={4} align="center">Basic Clocks </Heading>
       <Flex direction={["column", "row"]}>
         <Flex direction={"row"}>
-          <Heading color="lightpink">{time.split(":")[0]}:</Heading>
-          <Heading color="lightblue">{time.split(":")[1]}:</Heading>
-          <Heading color="lightgreen">{time.split(":")[2]}</Heading>
+          <Heading color="coral">{time.split(":")[0]}:</Heading>
+          <Heading color="cyan">{time.split(":")[1]}:</Heading>
+          <Heading color="orange">{time.split(":")[2]}</Heading>
         </Flex>
         <Box>
           <Circle
@@ -42,21 +41,21 @@ function Clock() {
             <Square
               width="180px"
               height="6px"
-              bgGradient="linear(to-l, lightpink,lightpink ,transparent, transparent , transparent)"
+              bgGradient="linear(to-l, coral,coral ,transparent, transparent , transparent)"
               position="fixed"
               transform={"rotate(" + ((hour * 30) - 90) + "deg)"}
             />
             <Square
               width="120px"
               height="6px"
-              bgGradient="linear(to-l, lightblue, lightblue, transparent, transparent , transparent)"
+              bgGradient="linear(to-l, cyan, cyan, transparent, transparent , transparent)"
               position="fixed"
               transform={"rotate(" + ((minute * 6) - 90) + "deg)"}
             />
             <Square
               width="180px"
               height="3px"
-              bgGradient="linear(to-l, lightgreen, lightgreen, transparent, transparent , transparent)"
+              bgGradient="linear(to-l, orange, orange, transparent, transparent , transparent)"
               position="fixed"
               transform={"rotate(" + ((second * 6) - 90) + "deg)"}
             />
@@ -67,7 +66,7 @@ function Clock() {
             size="240px"
             thickness="5px"
             trackColor="black"
-            color="lightgreen"
+            color="orange"
             value={((second / 60) * 100)}
             position="fixed"
           />
@@ -77,7 +76,7 @@ function Clock() {
             size="220px"
             thickness="5px"
             trackColor="black"
-            color="lightblue"
+            color="cyan"
             value={((minute / 60) * 100)}
             position="fixed"
           />
@@ -87,7 +86,7 @@ function Clock() {
             size="200px"
             thickness="5px"
             trackColor="black"
-            color="lightpink"
+            color="coral"
             value={(hour / 12) * 100}
           />
         </Box>
