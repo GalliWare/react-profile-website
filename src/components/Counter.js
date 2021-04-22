@@ -7,7 +7,7 @@ function Counter() {
   return (
     <Box padding="5px" align="center" margin="10px">
       <Heading size="3xl" marginBottom={4}>Basic Counter </Heading>
-      <Heading color="red" marginBottom={2}>{count}</Heading>
+      <Heading color="coral" marginBottom={2}>{count}</Heading>
       <Button
         size="lg"
         color="lightblue"

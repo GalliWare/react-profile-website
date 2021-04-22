@@ -78,10 +78,10 @@ function Calculator() {
     <Box align="center">
       <Heading size="3xl" marginBottom={4}>Basic Calculator </Heading>
       <Box height="50px" width="250px" padding="5px" align="center" margin="10px">
-        <Heading color="red" marginBottom={2}>{total}</Heading>
+        <Heading color="coral" marginBottom={2}>{total}</Heading>
         <Input
           type="number"
-          color="red"
+          color="coral"
           value={textInput}
           onChange={(e) => {
             setTextInput(e.target.value)
