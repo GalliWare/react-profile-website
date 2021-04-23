@@ -8,7 +8,9 @@ function Clock() {
   const [second, setSecond] = useState(0)
   useEffect(() => {
     let clockUpdate = setInterval(() => {
-      setHour(new Date().getHours())
+      let hourNow = new Date().getHours()
+      if (hourNow > 12) { hourNow -= 12; console.log(hourNow) }
+      setHour(hourNow)
       setMinute(new Date().getMinutes())
       setSecond(new Date().getSeconds())
       setTime(new Date().toLocaleTimeString())
@@ -87,7 +89,7 @@ function Clock() {
             thickness="5px"
             trackColor="black"
             color="coral"
-            value={(hour / 12) * 100}
+            value={((hour / 12) * 100)}
           />
         </Box>
       </Flex>
