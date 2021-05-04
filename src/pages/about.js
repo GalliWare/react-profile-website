@@ -66,6 +66,7 @@ function About() {
         <TabPanels>
           <TabPanel>
             <Heading
+              width="75%"
               padding="4"
               fontFamily="verdana"
               fontSize={["3xl", "5xl"]}
@@ -74,6 +75,7 @@ function About() {
             > About Me
             </Heading>
             <Text
+              width="75%"
               marginLeft="5"
               color="white"
               fontSize={["m", "lg"]}
@@ -84,6 +86,7 @@ function About() {
               to improve my development skills and theoretical knowledge.
             </Text>
             <Text
+              width="75%"
               marginLeft="5"
               color="white"
               fontSize={["m", "lg"]}
@@ -93,13 +96,22 @@ function About() {
               finding a solution to a idea or problem.
             </Text>
             <Text
+              width="75%"
               marginLeft="5"
               color="white"
               fontSize={["m", "lg"]}
               align="center"
             >
-              I found my enjoyment of coding when I was doing a lot of Powershell coding at Jane Street
-              and more recently in my free time I start to learn JavaScript and then use the React framework
+              I found my enjoyment of coding when I was doing a lot of Powershell coding at Jane Street.
+            </Text>
+            <Text
+              width="75%"
+              marginLeft="5"
+              color="white"
+              fontSize={["m", "lg"]}
+              align="center"
+            >
+              More recently in my free time I start to learn JavaScript and then use the React framework
               to make some basic sites.
             </Text>
           </TabPanel>
