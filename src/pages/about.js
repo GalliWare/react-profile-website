@@ -42,23 +42,23 @@ function About() {
       <Tabs align="center" variant="unstyled" color="lightblue">
         <TabList>
           <Tab
-            _selected={{ color: "black", bg: "lightblue" }}
-            _hover={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+            _selected={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+            _hover={{ borderRadius: "30px", color: "lightblue", bg: "black" }}
           >
             About</Tab>
           <Tab
-            _selected={{ color: "black", bg: "lightblue" }}
-            _hover={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+            _selected={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+            _hover={{ borderRadius: "30px", color: "lightblue", bg: "black" }}
           >
             Experience</Tab>
           <Tab
-            _selected={{ color: "black", bg: "lightblue" }}
-            _hover={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+            _selected={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+            _hover={{ borderRadius: "30px", color: "lightblue", bg: "black" }}
           >
             Education</Tab>
           <Tab
-            _selected={{ color: "black", bg: "lightblue" }}
-            _hover={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+            _selected={{ borderRadius: "30px", color: "black", bg: "lightblue" }}
+            _hover={{ borderRadius: "30px", color: "lightblue", bg: "black" }}
           >
             Contact</Tab>
         </TabList>

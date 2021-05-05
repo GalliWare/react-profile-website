@@ -18,18 +18,18 @@ function App() {
       <Tabs align="end" variant="unstyled" color="yellow">
         <TabList>
           <Tab
-            _selected={{ color: "black", bg: "yellow" }}
-            _hover={{ borderRadius: "30px", color: "black", bg: "yellow" }}
+            _selected={{ borderRadius: "30px", color: "black", bg: "yellow" }}
+            _hover={{ borderRadius: "30px", color: "yellow", bg: "black" }}
           >
             Home</Tab>
           <Tab
-            _selected={{ color: "black", bg: "yellow" }}
-            _hover={{ borderRadius: "30px", color: "black", bg: "yellow" }}
+            _selected={{ borderRadius: "30px", color: "black", bg: "yellow" }}
+            _hover={{ borderRadius: "30px", color: "yellow", bg: "black" }}
           >
             About</Tab>
           <Tab
-            _selected={{ color: "black", bg: "yellow" }}
-            _hover={{ borderRadius: "30px", color: "black", bg: "yellow" }}
+            _selected={{ borderRadius: "30px", color: "black", bg: "yellow" }}
+            _hover={{ borderRadius: "30px", color: "yellow", bg: "black" }}
           >
             Projects</Tab>
         </TabList>
