@@ -1,6 +1,5 @@
 import React from "react"
-import { ChakraProvider, Flex, Tabs, Tab, TabPanels, TabPanel, TabList, Box } from "@chakra-ui/react"
-import Header from "../components/Header"
+import { Flex, Tabs, Tab, TabPanels, TabPanel, TabList, Box } from "@chakra-ui/react"
 import Calculator from "../components/Calculator"
 import Counter from "../components/Counter"
 import Clock from '../components/Clock';
