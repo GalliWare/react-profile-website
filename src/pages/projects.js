@@ -1,8 +1,8 @@
 import React from "react"
 import { Flex, Tabs, Tab, TabPanels, TabPanel, TabList, Box } from "@chakra-ui/react"
-import Calculator from "../components/Calculator"
-import Counter from "../components/Counter"
-import Clock from '../components/Clock';
+import Calculator from "../components/projects/Calculator"
+import Counter from "../components/projects/Counter"
+import Clock from '../components/projects/Clock';
 
 
 function Projects() {
